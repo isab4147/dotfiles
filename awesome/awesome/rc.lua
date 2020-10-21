@@ -70,7 +70,7 @@ local exit_screen_themes = {
     "lovelace",      -- 1 -- Uses image icons
     "ephemeral",     -- 2 -- Uses text-generated icons (consumes less RAM)
 }
-local exit_screen_theme = exit_screen_themes[1]
+local exit_screen_theme = exit_screen_themes[2]
 -- ===================================================================
 -- User variables and preferences
 user = {
@@ -78,7 +78,7 @@ user = {
     -- Check apps.lua for more
     terminal = "kitty -1",
     floating_terminal = "kitty -1",
-    browser = "firefox",
+    browser = "brave",
     file_manager = "kitty -1 --class files -e ranger",
     editor = "kitty -1 --class editor -e vim",
     email_client = "kitty -1 --class email -e neomutt",
@@ -858,7 +858,7 @@ awful.rules.rules = {
             class = {
                 "firefox",
                 "Nightly",
-		"Brave-browser",
+		        "Brave-browser",
                 -- "qutebrowser",
             },
         },
@@ -871,32 +871,14 @@ awful.rules.rules = {
     },
 
     -- Games
-    {
-        rule_any = {
-            class = {
-                "underlords",
-                "lt-love",
-                "portal2_linux",
-                "deadcells",
-                "csgo_linux64",
-                "EtG.x86_64",
-                "factorio",
-                "dota2",
-                "Terraria.bin.x86",
-                "dontstarve_steam",
-                "Wine",
-                "trove.exe"
-            },
-            instance = {
-                "love.exe",
-                "synthetik.exe",
-                "pathofexile_x64steam.exe",
-                "leagueclient.exe",
-                "glyphclientapp.exe"
-            },
-        },
-        properties = { screen = 1, tag = awful.screen.focused().tags[2] }
-    },
+    --{
+    --    rule_any = {
+    --        class = {
+    --            "whatsapp-nativefier-d40211"
+    --        },
+    --      },
+    --    properties = { screen = 1, tag = awful.screen.focused().tags[2] }
+    --},
 
     -- Chatting
     {
@@ -909,9 +891,9 @@ awful.rules.rules = {
                 "Signal",
                 "Slack",
                 "TeamSpeak 3",
-                "zoom",
                 "weechat",
                 "6cord",
+                "whatsapp-nativefier-d40211"
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[3] }

@@ -126,7 +126,7 @@ music:buttons(gears.table.join(
 -- Helper function that creates a button widget
 local create_button_time = function (color, bg_color, hover_color)
     local widget = wibox.widget {
-        font = "Raleway Medium lnum 14",
+        font = "Raleway Medium lnum 13",
         align = "center",
         id = "text_role",
         valign = "center",
@@ -136,7 +136,7 @@ local create_button_time = function (color, bg_color, hover_color)
 
     local section = wibox.widget {
         widget,
-        forced_width = dpi(120),
+        forced_width = dpi(100),
 	left = dpi(15),
         right = dpi(15),
         -- Add margins to top and bottom in order to force the

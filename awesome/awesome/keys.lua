@@ -428,8 +428,8 @@ keys.globalkeys = gears.table.join(
         {description = "select area to copy to clipboard", group = "screenshots"}),
     awful.key( { superkey }, "Print", function() apps.screenshot("browse") end,
         {description = "browse screenshots", group = "screenshots"}),
-    awful.key( { superkey, shiftkey }, "c", function() apps.screenshot("gimp") end,
-        {description = "edit most recent screenshot with gimp", group = "screenshots"}),
+    --awful.key( { superkey, shiftkey }, "c", function() apps.screenshot("gimp") end,
+    --    {description = "edit most recent screenshot with gimp", group = "screenshots"}),
     -- Toggle tray visibility
     awful.key({ superkey }, "=",
         function ()

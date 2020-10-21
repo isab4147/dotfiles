@@ -100,7 +100,7 @@ apps.music = function ()
 end
 
 apps.music_spot = function ()
-    helpers.scratchpad({instance = "musicSpot"}, user.music_client_spot)
+    helpers.scratchpad({instance = "music_spot"}, user.music_client_spot)
 end
 
 

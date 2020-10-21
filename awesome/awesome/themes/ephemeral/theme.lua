@@ -23,7 +23,7 @@ theme.wallpaper_lock = os.getenv("HOME") .. "/.config/awesome/themes/" .. theme_
 
 -- Set the theme font. This is the font that will be used by default in menus, bars, titlebars etc.
 -- theme.font          = "sans 11"
-theme.font          = "Raleway Medium lnum 14"
+theme.font          = "Raleway Medium 13"
 
 -- This is how to get other .Xresources values (beyond colors 0-15, or custom variables)
 -- local cool_color = awesome.xrdb_get_value("", "color16")
@@ -59,7 +59,7 @@ theme.border_radius = dpi(6)
 theme.titlebars_enabled = false
 theme.titlebar_size = dpi(25)
 theme.titlebar_title_enabled = true
-theme.titlebar_font = "Raleway Medium lnum 11"
+theme.titlebar_font = "Raleway Medium 11"
 -- Window title alignment: left, right, center
 theme.titlebar_title_align = "center"
 -- Titlebar position: top, bottom, left, right
@@ -93,7 +93,7 @@ theme.notification_icon_size = dpi(60)
 -- theme.notification_width = dpi(300)
 theme.notification_margin = dpi(16)
 theme.notification_opacity = 1
-theme.notification_font = "Raleway Medium lnum 12"
+theme.notification_font = "Raleway Medium 12"
 theme.notification_padding = theme.screen_margin * 2
 theme.notification_spacing = theme.screen_margin * 2
 
@@ -151,7 +151,7 @@ theme.prefix_fg = x.color8
 --theme.taglist_bg_focus = "#ff0000"
 
  --Tasklist
-theme.tasklist_font = "Raleway Medium lnum 14"
+theme.tasklist_font = "Raleway Medium lnum 13"
 theme.tasklist_disable_icon = true
 theme.tasklist_plain_task_name = true
 theme.tasklist_bg_focus = x.color0

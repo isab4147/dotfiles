@@ -232,7 +232,7 @@ notifications_button = control_button(c, notifications_symbol, notifications.mpd
     text.markup = helpers.colorize_text(notifications_symbol, notifications.mpd.enabled and notifications_color or disabled_color)
 end)
 
-local main_titlebar_size = dpi(0)
+local main_titlebar_size = dpi(30)
 
 local mpd_create_decoration = function (c)
     -- Main titlebar
