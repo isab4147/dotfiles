@@ -21,8 +21,6 @@ end
 
 alias pls=sudo
 alias gib=pac
-alias reboot="sudo systemctl reboot"
-alias poweroff="sudo systemctl poweroff"
 
 set -gx PATH $PATH $HOME/bin
 set -gx PATH /usr/bin/tizonia $PATH
