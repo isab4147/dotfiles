@@ -70,7 +70,7 @@ local exit_screen_themes = {
     "lovelace",      -- 1 -- Uses image icons
     "ephemeral",     -- 2 -- Uses text-generated icons (consumes less RAM)
 }
-local exit_screen_theme = exit_screen_themes[1]
+local exit_screen_theme = exit_screen_themes[2]
 -- ===================================================================
 -- User variables and preferences
 user = {
@@ -310,7 +310,7 @@ awful.screen.connect_for_each_screen(function(s)
         l.max,
         l.tile,
         l.max,
-        l.tile,
+        l.max,
         l.tile,
         l.tile,
         l.tile,
@@ -909,7 +909,6 @@ awful.rules.rules = {
                 "Signal",
                 "Slack",
                 "TeamSpeak 3",
-                "zoom",
                 "weechat",
                 "6cord",
             },
@@ -922,6 +921,7 @@ awful.rules.rules = {
         rule_any = {
             class = {
                 "^editor$",
+                "zoom",
                 -- "Emacs",
                 -- "Subl3",
             },
