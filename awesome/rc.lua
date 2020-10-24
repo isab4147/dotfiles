@@ -885,6 +885,7 @@ awful.rules.rules = {
                 "Terraria.bin.x86",
                 "dontstarve_steam",
                 "Wine",
+                "whatsapp-nativefier-d40211",
                 "trove.exe"
             },
             instance = {
