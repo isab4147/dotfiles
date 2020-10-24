@@ -1,0 +1,24 @@
+# Load Xresources
+xrdb -load ~/.Xresources
+
+# Start compositor
+killall -p picom
+picom -b &
+
+# set keyboard stuff
+xset r rate 200 30
+xset s off -dpms
+
+# start some stuff
+#systemctl --user restart redshift-gtk &
+
+killall -p ckb-next
+ckb-next -b &
+
+killall -p nm-applet
+nm-applet -b &
+# systemctl restart bluetoothctl &
+discord &
+
+# Start KDEconnect
+# /usr/lib/kdeconnectd &
