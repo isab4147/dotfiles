@@ -128,7 +128,7 @@ user = {
     -- Get your key and find your city id at
     -- https://openweathermap.org/
     -- (You will need to make an account!)
-    openweathermap_key = "13b58965a26ae710e5c36c6353b1bd9e",
+    openweathermap_key = "",
     openweathermap_city_id = "3456166",
     -- > Use "metric" for Celcius, "imperial" for Fahrenheit
     weather_units = "metric",
