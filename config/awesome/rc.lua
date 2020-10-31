@@ -128,7 +128,7 @@ user = {
     -- Get your key and find your city id at
     -- https://openweathermap.org/
     -- (You will need to make an account!)
-    openweathermap_key = "",
+    openweathermap_key = "13b58965a26ae710e5c36c6353b1bd9e",
     openweathermap_city_id = "3456166",
     -- > Use "metric" for Celcius, "imperial" for Fahrenheit
     weather_units = "metric",
@@ -249,6 +249,8 @@ screen_height = awful.screen.focused().geometry.height
 -- Layouts
 -- ===================================================================
 -- Table of layouts to cover with awful.layout.inc, order matters.
+local lain = require("lain")
+
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
@@ -256,16 +258,17 @@ awful.layout.layouts = {
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
+    --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.corner.nw,
-    --awful.layout.suit.magnifier,
+    awful.layout.suit.magnifier,
     --awful.layout.suit.corner.ne,
     --awful.layout.suit.corner.sw,
     --awful.layout.suit.corner.se,
+    lain.layout.cascade.tile,
 }
 
 -- Wallpaper
@@ -885,7 +888,6 @@ awful.rules.rules = {
                 "Terraria.bin.x86",
                 "dontstarve_steam",
                 "Wine",
-                "whatsapp-nativefier-d40211",
                 "trove.exe"
             },
             instance = {
@@ -912,6 +914,7 @@ awful.rules.rules = {
                 "TeamSpeak 3",
                 "weechat",
                 "6cord",
+                "whatsapp-nativefier-d40211",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[3] }
@@ -949,6 +952,7 @@ awful.rules.rules = {
             class = {
                 "Gimp",
                 "Inkscape",
+                "Pulseeffects"
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[6] }

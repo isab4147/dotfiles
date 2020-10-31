@@ -41,7 +41,7 @@ theme.fg_urgent     = x.color3
 theme.fg_minimize   = x.color8
 
 -- Gaps
-theme.useless_gap   = dpi(10)
+theme.useless_gap   = dpi(5)
 -- This could be used to manually determine how far away from the
 -- screen edge the bars / notifications should be.
 theme.screen_margin = dpi(10)

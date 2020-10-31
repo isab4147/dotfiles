@@ -4,6 +4,7 @@ local gears = require("gears")
 local beautiful = require("beautiful")
 local apps = require("apps")
 local decorations = require("decorations")
+local lain = require("lain")
 
 local helpers = require("helpers")
 
@@ -231,7 +232,11 @@ keys.globalkeys = gears.table.join(
         awful.spawn(user.floating_terminal, {floating = true})
                                                 end,
         {description = "spawn floating terminal", group = "launcher"}),
-
+    
+    -- Spawn browser
+    awful.key({ superkey, shiftkey }, "b", function () awful.spawn(user.browser) end,
+        {description = "open a browser", group = "launcher"}),
+    
     -- Reload Awesome
     awful.key({ superkey, shiftkey }, "r", awesome.restart,
         {description = "reload awesome", group = "awesome"}),
@@ -355,6 +360,16 @@ keys.globalkeys = gears.table.join(
     --awful.key({ superkey, ctrlkey }, "b", function() menubar.show() end,
     --{description = "show the menubar", group = "launcher"}),
 
+    awful.key( { ctrlkey, superkey }, "b",
+        function()
+            awful.spawn.with_shell("bluetoothctl connect 7C:96:D2:09:4A:03")
+        end,
+        {description = "connect bluetooth", group = "bluetooth"}),
+    awful.key( { ctrlkey, shiftkey, superkey }, "b",
+        function()
+            awful.spawn.with_shell("bluetoothctl disconnect 7C:96:D2:09:4A:03")
+        end,
+        {description = "disconnect bluetooth", group = "bluetooth"}),
     -- Brightness
     awful.key( { }, "XF86MonBrightnessDown",
         function()
@@ -449,6 +464,33 @@ keys.globalkeys = gears.table.join(
     --    {description = "mpv previous song", group = "media"}),
     --awful.key({ superkey, shiftkey}, "space", function() awful.spawn.with_shell("mpvc toggle") end,
     --    {description = "mpv toggle pause/play", group = "media"}),
+    awful.key({ superkey, shiftkey }, "a",
+        function()
+            awful.layout.set(lain.layout.cascade.tile)
+            helpers.single_double_tap(
+                nil,
+                function()
+                    local clients = awful.screen.focused().clients
+                    for _, c in pairs(clients) do
+                        c.floating = false
+                    end
+                end)
+        end,
+        {description = "set tiled layout", group = "tag"}),
+    
+    awful.key({ superkey }, "a",
+        function()
+            awful.layout.set(awful.layout.suit.magnifier)
+            helpers.single_double_tap(
+                nil,
+                function()
+                    local clients = awful.screen.focused().clients
+                    for _, c in pairs(clients) do
+                        c.floating = false
+                    end
+                end)
+        end,
+        {description = "set tiled layout", group = "tag"}),
 
     awful.key({ superkey }, "F8", function() awful.spawn.with_shell("mpvc quit") end,
         {description = "mpv quit", group = "media"}),
@@ -504,10 +546,10 @@ keys.globalkeys = gears.table.join(
     end, {description = "dashboard", group = "custom"}),
 
     -- App drawer
-    awful.key({ superkey }, "a", function()
-        app_drawer_show()
-                                 end,
-        {description = "App drawer", group = "custom"}),
+    --awful.key({ superkey }, "a", function()
+    --    app_drawer_show()
+    --                             end,
+    --    {description = "App drawer", group = "custom"}),
 
     -- Pomodoro timer
     awful.key({ superkey }, "slash", function()

@@ -1,16 +1,20 @@
 # Load Xresources
 xrdb -load ~/.Xresources
 
+#/etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
+
 # Start compositor
 killall -p picom
 picom -b &
+xsettingsd &
+pulseeffects &
 
 # set keyboard stuff
 xset r rate 200 30
 xset s off -dpms
 
 # start some stuff
-#systemctl --user restart redshift-gtk &
+redshift-gtk &
 
 killall -p ckb-next
 ckb-next -b &

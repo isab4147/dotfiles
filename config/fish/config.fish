@@ -1,5 +1,6 @@
 #source ~/.fancy-bash-promt.sh
 alias pac=yay
+alias btrmanager='pushd $HOME/.local/share/applications/ && gtk-launch buttermanager.desktop && popd'
 #alias yay='doas pacmatic'
 #alias sudo='doas'
 
